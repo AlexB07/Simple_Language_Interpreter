@@ -1,0 +1,10 @@
+Excellent versatile interpreted language interpreter
+
+Build with
+
+ant
+
+Run with
+
+java -jar dist/lib/interpreter.jar
+
