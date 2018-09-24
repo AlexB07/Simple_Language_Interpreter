@@ -14,4 +14,16 @@ public class PrintTest
 
 
 	}
+
+	@Test
+	public void testset(){
+		Interpreter interpreter = new Interpreter();
+		ArrayList<String> result = interpreter.interpret("set x 4");
+		ArrayList<String> result1 = interpreter.interpret("print x");
+		assertEquals(result.get(0), 4);
+		
+
+
+
+	}
 }
