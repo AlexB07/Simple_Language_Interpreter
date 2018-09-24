@@ -41,4 +41,17 @@
   <delete dir="${dist}"/>
 </target>
 
+<target name="test" depends="test-compile">
+  <junit printsummary="on" haltonfailure="yes" fork="true">
+    <classpath>
+      <path refid="classpath.test"/>
+      <pathelement location="${build}/test"/>
+    </classpath>
+    <formatter type="brief" usefile="false" />
+    <batchtest>
+      <fileset dir="${test}" includes="**/*Test.java" />
+    </batchtest>
+  </junit>
+</target>
+
 </project>
